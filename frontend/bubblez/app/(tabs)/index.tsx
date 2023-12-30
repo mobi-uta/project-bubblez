@@ -2,37 +2,18 @@ import { StyleSheet, Pressable } from 'react-native';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
+import { EventCard } from '../../components/EventCard';
 
 export default function TabOneScreen() {
   return (
     <>
+      
       <View style={styles.container}>
         <Text style={styles.title}>Browse</Text>
         <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <EventCard what="CTF" who="CSEC" when="12-30-2023" where="Discord"></EventCard>
+        <EventCard what="Social Coding" who="MOBI" when="01-03-2023" where="Discord"></EventCard>
       </View>
-      <View style = {styles.centeredView}>
-        <View style={styles.cardView}>
-            <Text style={styles.cardText}>CTF Meeting</Text>
-            <Text style={styles.cardText}>CSEC</Text>
-            <Text style={styles.cardText}>Discord</Text>
-            <Text style={styles.cardText}>Dec 29, 2023</Text>
-            <Pressable style={[styles.button, styles.buttonClose]}>
-              <Text style={styles.textStyle}>RSVP</Text>
-            </Pressable>
-        </View>
-      </View>
-      <View style = {styles.centeredView}>
-        <View style={styles.cardView}>
-            <Text style={styles.cardText}>Social Coding</Text>
-            <Text style={styles.cardText}>MOBI</Text>
-            <Text style={styles.cardText}>UH 16</Text>
-            <Text style={styles.cardText}>Jan 17, 2024</Text>
-            <Pressable style={[styles.button, styles.buttonClose]}>
-              <Text style={styles.textStyle}>RSVP</Text>
-            </Pressable>
-        </View>
-      </View>
-      
     </>
   );
 }
